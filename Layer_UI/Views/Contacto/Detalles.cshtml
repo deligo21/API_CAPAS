@@ -1,0 +1,32 @@
+﻿@model VMContacto
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<div class="card">
+    <div class="card-header">
+        Detalles de Contacto
+    </div>
+    <div class="card-body">
+        <form>
+            <input asp-for="IdContacto" type="hidden" class="form-control">
+
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input asp-for="Nombre" type="text" class="form-control" disabled="disabled">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Telefono</label>
+                <input asp-for="Telefono" type="text" class="form-control" disabled="disabled">
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de Nacimiento</label>
+                <input asp-for="FechaNacimiento" type="date" class="form-control" disabled="disabled">
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <a asp-action="Index" asp-controller="Contacto" class="btn btn-warning">Volver a la lista</a>
+        </form>
+    </div>
+</div>
